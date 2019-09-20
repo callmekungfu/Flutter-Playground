@@ -13,18 +13,19 @@ import 'package:flutter_playground/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(Home());
 
     // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('First Tab'), findsOneWidget);
+    expect(find.text('Second Tab'), findsOneWidget);
+    expect(find.text('Third Tab'), findsOneWidget);
 
     // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    await tester.tap(find.byIcon(Icons.file_upload));
     await tester.pump();
 
     // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Second Tab'), findsOneWidget);
+    expect(find.text('First Tab'), findsNothing);
   });
 }

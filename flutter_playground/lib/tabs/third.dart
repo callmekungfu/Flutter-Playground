@@ -16,7 +16,7 @@ class ThirdTab extends StatelessWidget {
                 color: Colors.white,
               ),
               Text(
-                "First Tab",
+                "Third Tab",
                 style: TextStyle(color: Colors.white),
               )
             ],
